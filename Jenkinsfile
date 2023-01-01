@@ -3,7 +3,7 @@ pipeline{
         label "docker-node"
     } 
     triggers {
-        pollSCM('40 3 * * *')
+        pollSCM('* * * * *')
     }
     stages{
         stage('vcs'){
