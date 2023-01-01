@@ -1,6 +1,9 @@
 pipeline{
     agent{
         label "docker-node"
+    } 
+    triggers {
+        pollSCM('40 3 * * *')
     }
     stages{
         stage('vcs'){
