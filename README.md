@@ -68,3 +68,4 @@ npm run dev
 - [Usage with Docker 🐳](docs/docker.md)
 - [Sentry adapter 🗼](docs/sentry-adapter.md)
 - [Deployment 🌐](docs/deployment.md)
+.
