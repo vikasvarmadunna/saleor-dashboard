@@ -19,7 +19,7 @@ pipeline {
         stage('push image to registry') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image push shaikkhajaibrahim/saleor-dashboar:DEV'
+                sh 'docker image push vikasindian/saleor-dashboar:DEV'
             }
         }
         stage('create terraform infrastructre') {
