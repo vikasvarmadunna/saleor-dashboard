@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "mvn"
+        label "jenkins-node"
     }
     stages{
         stage('vcs'){
