@@ -7,7 +7,7 @@ pipeline {
         stage('vcs') {
             agent { label 'docker-node' }
             steps {
-                git branch: 'dev', url: 'https://github.com/WorkshopsByKhaja/saleor-dashboard.git'
+                git branch: 'dev', url: 'https://github.com/vikasvarmadunna/saleor-dashboard.git'
             }
         }
         stage('docker image build') {
@@ -19,7 +19,7 @@ pipeline {
         stage('push image to registry') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image push shaikkhajaibrahim/saleor-dashboar:DEV'
+                sh 'docker image push vikasindian/saleor-dashboar:DEV'
             }
         }
         stage('create terraform infrastructre') {
