@@ -23,7 +23,7 @@ pipeline {
             }
         }
         stage('create terraform infrastructre') {
-            agent { label 'terraform' }
+            agent { label 'terraform-node' }
             steps {
                 git url: 'git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster'
                 sh 'terraform init && terraform apply -auto-approve'
