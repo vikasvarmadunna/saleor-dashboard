@@ -19,7 +19,7 @@ pipeline {
         stage('push image to registry') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker  push ravi vikasindian/ravi:DEV'
+                sh 'docker push ravivikasindian/ravi:DEV'
             }
         }
         stage('create terraform infrastructre') {
