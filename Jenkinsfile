@@ -14,6 +14,7 @@ pipeline {
             agent { label 'docker-node' }
             steps {
                 sh 'docker image build -t tejavikasindian/teja .'
+                sh 'docker images'
             }
         }
         stage('push image to registry') {
