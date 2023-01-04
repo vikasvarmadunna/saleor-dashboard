@@ -7,7 +7,7 @@ pipeline {
         stage('vcs') {
             agent { label 'docker-node' }
             steps {
-                git branch: 'dev', url: 'https://github.com/WorkshopsByKhaja/saleor-dashboard.git'
+                git branch: 'dev', url: 'https://github.com/vikasvarmadunna/saleor-dashboard.git'
             }
         }
         stage('docker image build') {
