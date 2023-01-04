@@ -13,13 +13,13 @@ pipeline {
         stage('docker image build') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image build -t vikasindian/saleor-vikasdashboard:DEV .'
+                sh 'docker image build -t vikasindian1/saleor-vikasdashboard:DEV .'
             }
         }
         stage('push image to registry') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image push vikasindian/saleor-vikasdashboard:DEV'
+                sh 'docker image push vikasindian1/saleor-vikasdashboard:DEV'
             }
         }
         stage('create terraform infrastructre') {
