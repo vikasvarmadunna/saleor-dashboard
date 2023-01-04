@@ -13,7 +13,7 @@ pipeline {
         stage('docker image build') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image build -t shaikkhajaibrahim/saleor-dashboar:DEV .'
+                sh 'docker image build -t vikasindian/saleor-dashboar:DEV .'
             }
         }
         stage('push image to registry') {
