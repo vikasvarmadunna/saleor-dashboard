@@ -13,13 +13,13 @@ pipeline {
         stage('docker image build') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image build -t teja vikasindian/teja .'
+                sh 'docker image build -t tejavikasindian/teja .'
             }
         }
         stage('push image to registry') {
             agent { label 'docker-node' }
             steps {
-                sh 'docker image push vikasindian/teja'
+                sh 'docker image push tejavikasindian/teja'
             }
         }
         stage('create terraform infrastructre') {
